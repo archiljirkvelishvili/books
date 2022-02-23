@@ -1,0 +1,9 @@
+.booklist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  margin-top: 10px;
+  width: 100%;
+  min-height: 200px;
+}

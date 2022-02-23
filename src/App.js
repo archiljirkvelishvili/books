@@ -1,22 +1,13 @@
 import React from 'react'
 
-export default function App() {
-  const [data, setData] = React.useState(null)
+import { Nav } from './components/Nav'
+import { Pages } from './pages/index'
 
-  React.useEffect(() => {
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=search-terms&key=AIzaSyBg9S1VTuUbjAV7wYjFoZeJaDnvFJWxvBw`)
-      .then(res => {
-        return res.json()
-      })
-      .then(data => {
-        setData(data)
-      })
-  }, [])
-
+export function App() {
   return (
     <div>
-      <p>{JSON.stringify(data)}</p>
-      <p>hello</p>
+      <Nav />
+      <Pages />
     </div>
   )
 }
